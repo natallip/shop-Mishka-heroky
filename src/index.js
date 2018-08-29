@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   res.status(500).send('500 Server error');
 });
 app.set('port', (process.env.PORT || 8081));
-app.set('host', (process.env.IP || 'localhost'));
+app.set('host', (process.env.IP || '0.0.0.0'));
 
 server.listen(app.get('port'), app.get('host'), () => {
   console.log(`Server running on http://${app.get('host')}:${app.get('port')}`);
