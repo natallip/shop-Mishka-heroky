@@ -15,6 +15,6 @@ app
   // .use(favicon(path.join(process.cwd(), './public', 'favicon.ico')))
   .use(express.static(path.join(process.cwd(), publicDir)))
   .use(bodyParser.json({ type: 'text/plain' }))
-  .use(bodyParser.urlencoded({ extended: false }))
+  .use(bodyParser.urlencoded({ extended: false }));
 
 module.exports = app;
